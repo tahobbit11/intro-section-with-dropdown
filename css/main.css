@@ -122,10 +122,6 @@
     overflow: hidden;
   }
 
-  .listed-item {
-
-  }
-
   .sidebar {
     z-index: 10000;
     width: 260px;
@@ -134,7 +130,8 @@
     top: 0;
     right: 0;
     background-color: white;
-    transform: translate(100%);
+    transform: translate(200%);
+    box-shadow: -200px 0px rgba(0, 0, 0, 0.2);
   }
 
   .show-sidebar {
@@ -143,7 +140,6 @@
     background-color: white;
     color: black;
     max-width: 260px;
-    box-shadow: -200px 0px rgba(0, 0, 0, 0.2);
   }
 
   .open {
@@ -215,6 +211,11 @@
     margin-bottom: 20px;
   }
 
+  .login:hover,
+  .register:hover {
+    color: black;
+  }
+
   .register {
     border: 1px solid hsl(0, 0%, 41%);
     border-radius: 10px;
@@ -275,6 +276,7 @@
     align-items: center;
     list-style: none;
     padding: 0;
+    margin: 0;
   }
 
   .company img{
@@ -365,8 +367,123 @@
      Modify as content requires.
      ========================================================================== */
   
-  @media only screen and (min-width: 35em) {
+  @media only screen and (min-width: 768px) {
     /* Style adjustments for viewports that meet the condition */
+    .nav-container {
+      width: 725px;
+      flex-direction: row;
+    }
+
+    .mobile-nav {
+      width: auto;
+    }
+
+    .open {
+      display: none;
+    }
+
+    .nav-body {
+      height: auto;
+      overflow: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+    }
+
+    .nav-list {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      padding-left: 10px;
+      margin: 0;
+    }
+
+    .listed-item,
+    .item {
+      padding-right: 10px;
+    }
+
+    .nav-list li a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .nested-list {
+      margin: 0;
+    }
+
+    .buttons {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .login {
+      margin-bottom: 0;
+    }
+
+    #feature {
+      transform: translate(-20%, 0);
+    }
+
+    .show-nested-list {
+      position: absolute;
+      background-color: white;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .content-wrapper {
+      width: 725px;
+      flex-direction: row-reverse;
+      padding-top: 40px;
+    }
+
+    .img-wrapper,
+    .text-wrapper {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .hero-img {
+      background-image: url(../images/image-hero-desktop.png);
+      background-position: center;
+      background-size: cover;
+      width: 256px;
+      height: 485px;
+      /*480 / 910*/
+    }
+
+    .text {
+      padding-top: 20px;
+      text-align: left;
+    }
+
+    .text h1 {
+      font-size: 2.5em;
+    }
+
+
+    .learn-more-button {
+      border-radius: 15px;
+    }
+
+    .company-list {
+      padding-top: 44px;
+    }
+
+  }
+
+  @media only screen and (min-width: 1440px) {
+    .nav-container {
+      width: 1296px;
+    }
+
+    
+
   }
   
   @media print,
